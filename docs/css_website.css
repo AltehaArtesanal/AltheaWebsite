@@ -1,0 +1,189 @@
+/* styles.css */
+
+/* General Body Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(180deg, #f8f0fc, #e1bee7); /* Light pink to semi-light purple gradient */
+    color: #333;
+}
+
+/* Navigation Bar */
+header {
+    background: linear-gradient(135deg, #d63384, #6f42c1);
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;  /* Set a fixed height for the header */
+}
+
+
+/* Navigation Container */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 10%;
+}
+/*HERE IS THE NEW CODE
+/* Adding a hover effect to the Log In link */
+.nav-links li:last-child a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.nav-links li:last-child a:hover {
+    color: #ffdfd3; /* Same hover effect as the others */
+}
+/*ENDS
+
+/* Logo Styling */
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+/* Language Toggle Button */
+#language-toggle {
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-size: 16px;
+    padding: 8px 16px;
+    display: inline-block;
+    vertical-align: middle;
+    transition: color 0.3s;
+}
+
+/* Hover effect for the language toggle button */
+#language-toggle:hover {
+    color: #ffdfd3;
+}
+
+/* Navigation Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+
+/* Navigation Bar Links - Make them look like buttons */
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px; /* Add padding to make the buttons bigger */
+    border-radius: 25px; /* This creates the rounded corners */
+    transition: 0.3s;
+    display: inline-block; /* Makes the anchor behave like a block element */
+    background-color: transparent; /* Background transparent so it shows the border color */
+    border: 2px solid transparent; /* Default transparent border */
+}
+
+
+/* Hover Effect - Change color when hovered */
+.nav-links a:hover {
+    color: #ffdfd3; /* Change text color */
+    background-color: #6f42c1; /* Add a background color on hover */
+    border-color: #6f42c1; /* Add border color when hovered */
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    /* Make sure the gradient transition here aligns with the body background */
+    background: transparent;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 18px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #d63384;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #b31b6b;
+}
+
+/* Product Section */
+#products {
+    padding: 50px 10%;
+    text-align: center;
+}
+
+#products h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #6f42c1;
+}
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Footer */
+footer {
+    background-color: #6f42c1;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 50px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .btn {
+        padding: 8px 15px;
+    }
+}
