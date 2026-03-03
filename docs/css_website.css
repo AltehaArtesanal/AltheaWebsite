@@ -11,7 +11,7 @@ body {
     background: linear-gradient(135deg, #f7f2f5, #e9f1ec);
     font-family: "Georgia", serif;
 
-    /* ⬇️ IMPORTANTE: ya no centramos todo como un solo bloque */
+    /*  IMPORTANTE: ya no centramos todo como un solo bloque */
     display: flex;
     justify-content: center;
     padding: 40px 20px;
@@ -19,7 +19,7 @@ body {
 
 .container {
     display: flex;
-    flex-direction: column;   /* 👈 clave para que los cuadros esten debajo de cada uno */
+    flex-direction: column;   /*  clave para que los cuadros esten debajo de cada uno */
     gap: 30px;                /* espacio vertical entre cuadros */
     align-items: center;      /* centra los cuadros horizontalmente */
     max-width: 1200px;
@@ -228,7 +228,7 @@ body {
 
 /* Extended information -ONLY FOR NOT MODAL PPPING  
 .product-info {
-    display: none;               👈 oculta por defecto 
+    display: none;               oculta por defecto 
     margin-top: 20px;
     text-align: center;
 }
