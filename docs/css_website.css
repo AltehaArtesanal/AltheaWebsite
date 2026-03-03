@@ -1,189 +1,292 @@
-/* styles.css */
-
-/* General Body Styles */
-body {
-    font-family: 'Arial', sans-serif;
+/* Reset */
+* {
     margin: 0;
     padding: 0;
-    background: linear-gradient(180deg, #f8f0fc, #e1bee7); /* Light pink to semi-light purple gradient */
-    color: #333;
+    box-sizing: border-box;
 }
 
-/* Navigation Bar */
-header {
-    background: linear-gradient(135deg, #d63384, #6f42c1);
-    padding: 15px 0;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1000;
+/* Page background */
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f7f2f5, #e9f1ec);
+    font-family: "Georgia", serif;
+
+    /* ⬇️ IMPORTANTE: ya no centramos todo como un solo bloque */
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 70px;  /* Set a fixed height for the header */
-}
-
-
-/* Navigation Container */
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    padding: 0 10%;
-}
-/*HERE IS THE NEW CODE
-/* Adding a hover effect to the Log In link */
-.nav-links li:last-child a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.nav-links li:last-child a:hover {
-    color: #ffdfd3; /* Same hover effect as the others */
-}
-/*ENDS
-
-/* Logo Styling */
-.logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: white;
-}
-
-/* Language Toggle Button */
-#language-toggle {
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-    background: none;
-    border: none;
-    font-size: 16px;
-    padding: 8px 16px;
-    display: inline-block;
-    vertical-align: middle;
-    transition: color 0.3s;
-}
-
-/* Hover effect for the language toggle button */
-#language-toggle:hover {
-    color: #ffdfd3;
-}
-
-/* Navigation Links */
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-    align-items: center;
-}
-
-.nav-links li {
-    display: inline;
-}
-
-
-/* Navigation Bar Links - Make them look like buttons */
-.nav-links a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    padding: 10px 20px; /* Add padding to make the buttons bigger */
-    border-radius: 25px; /* This creates the rounded corners */
-    transition: 0.3s;
-    display: inline-block; /* Makes the anchor behave like a block element */
-    background-color: transparent; /* Background transparent so it shows the border color */
-    border: 2px solid transparent; /* Default transparent border */
-}
-
-
-/* Hover Effect - Change color when hovered */
-.nav-links a:hover {
-    color: #ffdfd3; /* Change text color */
-    background-color: #6f42c1; /* Add a background color on hover */
-    border-color: #6f42c1; /* Add border color when hovered */
-}
-
-/* Hero Section */
-.hero {
-    text-align: center;
-    padding: 100px 20px;
-    /* Make sure the gradient transition here aligns with the body background */
-    background: transparent;
-    color: white;
-}
-
-.hero h1 {
-    font-size: 48px;
-    margin-bottom: 10px;
-}
-
-.hero p {
-    font-size: 18px;
-}
-
-.btn {
-    display: inline-block;
-    background-color: #d63384;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
-    transition: 0.3s;
-}
-
-.btn:hover {
-    background-color: #b31b6b;
-}
-
-/* Product Section */
-#products {
-    padding: 50px 10%;
-    text-align: center;
-}
-
-#products h2 {
-    font-size: 32px;
-    margin-bottom: 20px;
-    color: #6f42c1;
-}
-
-.product-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
     justify-content: center;
+    padding: 40px 20px;
 }
 
-/* Footer */
-footer {
-    background-color: #6f42c1;
-    color: white;
+.container {
+    display: flex;
+    flex-direction: column;   /* 👈 clave para que los cuadros esten debajo de cada uno */
+    gap: 30px;                /* espacio vertical entre cuadros */
+    align-items: center;      /* centra los cuadros horizontalmente */
+    max-width: 1200px;
+    width: 100%;
+}
+
+
+/* Decorated box */
+.decorated-box {
+    position: relative;
+    max-width: 600px;
+    width: 100%;
+    padding: 50px 40px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
     text-align: center;
-    padding: 15px 0;
-    margin-top: 50px;
+}
+.decorated-box h1 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #4b5d52;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-        text-align: center;
-    }
-    
-    .hero h1 {
-        font-size: 36px;
-    }
+.decorated-box p {
+    margin-bottom: 14px;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: #555;
+}
 
-    .hero p {
-        font-size: 16px;
-    }
+/* Introdution of Main Box */
+.intro-box {
+    max-width: 700px;
+}
+.intro-box h1 {
+    font-size: 2.2rem;
+}
+.intro-box p {
+    font-size: 1.1rem;
+}
 
-    .btn {
-        padding: 8px 15px;
+/* Product Box */
+.product-box {
+    max-width: 420px;
+    padding: 35px 30px;
+}
+.product-box h2 {
+    font-size: 1.4rem;
+    color: #4b5d52;
+    margin-bottom: 12px;
+}
+.product-box p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Product Grid */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    width: 100%;
+}
+
+/* Product Box */
+.product-box {
+    max-width: 380px;
+    width: 100%;
+    padding: 30px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+/* Product Box Image */
+.product-box img {
+    width: 100%;
+    max-width: 220px;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+/* Product Text*/
+.product-box h2 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: #4b5d52;
+}
+
+.product-box p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+
+/* Botón */
+.info-btn {
+    margin-top: 15px;
+    padding: 10px 22px;
+    background-color: #4b5d52;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.19s ease;;
+}
+.info-btn:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.12);
+}
+
+
+/* Overlay */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+.modal-overlay.active {
+    display: flex;
+}
+
+/* Modal box */
+.modal-content {
+    background: #fff;
+    max-width: 520px;
+    width: 90%;
+    border-radius: 14px;
+    text-align: center;
+    transform: scale(0.88) translateY(10px);
+    transition: transform 0.45s cubic-bezier(0.4, 0.0, 0.2, 1);
+    max-height: 85vh;
+    overflow-y: auto;
+    padding: 40px 35px;
+}
+.modal-content > * {
+    opacity: 0;
+    transition: opacity 0.5s ease 0.25s;
+}
+.modal-overlay.active .modal-content > * {
+    opacity: 1;
+}
+
+/* Modal Section */
+.modal-section {
+    margin-bottom: 28px;
+}
+.modal-section h3 {
+    font-size: 1.1rem;
+    color: #4b5d52;
+    margin-bottom: 10px;
+    letter-spacing: 0.4px;
+}
+.modal-section p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: #555;
+}
+/* Iconos en body of modal*/
+.icon-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+.icon-row img {
+    width: 26px;
+    height: 26px;
+    opacity: 0.8;
+    margin-top: 2px;
+}
+
+
+/* Active state */
+.modal-overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+.modal-overlay.active .modal-content {
+    transform: scale(1) translateY(0);
+}
+
+/* Close button */
+.modal-close {
+    position: absolute;
+    top: 18px;
+    right: 22px;
+    font-size: 26px;
+    cursor: pointer;
+    color: #666;
+}
+.modal-content img {
+    max-width: 280px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+
+/* Extended information -ONLY FOR NOT MODAL PPPING  
+.product-info {
+    display: none;               👈 oculta por defecto 
+    margin-top: 20px;
+    text-align: center;
+}
+.product-info p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+.product-info img {
+    width: 100%;
+    max-width: 260px;
+    margin: 15px auto;
+    border-radius: 8px;
+}
+.product-info {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+*/
+
+/*.product-info:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+*/
+
+/* Decorative corners */
+.corner {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.8;
+}
+/* List format*/
+.modal-section ul {
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+.modal-section li {
+    margin-bottom: 6px;
+    line-height: 1.5;
+}
+.modal-section li {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: #555;
+}
+
+
+
+/* Responsive */
+@media (max-width: 600px) {
+    .decorated-box {
+        padding: 40px 25px;
     }
 }
