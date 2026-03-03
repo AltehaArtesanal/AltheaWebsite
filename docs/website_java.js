@@ -1,13 +1,36 @@
-document.getElementById('language-toggle').addEventListener('click', function() {
-    var isEnglish = document.querySelector('.en').style.display !== 'none';
+// Reserved for future interactive or dynamic features
+console.log("Website loaded successfully");
+function toggleInfo(id) {
+    const section = document.getElementById(id);
 
-    // Toggle visibility of English and Spanish content
-    var englishLinks = document.querySelectorAll('.en');
-    var spanishLinks = document.querySelectorAll('.es');
+    if (section.style.display === "block") {
+        section.style.display = "none";
+    } else {
+        section.style.display = "block";
+    }
+}
+const modal = document.getElementById("modal");
+const closeModal = document.getElementById("closeModal");
+const modalTitle = document.getElementById("modal-title");
+const modalBody = document.getElementById("modal-body");
 
-    englishLinks.forEach(link => link.style.display = isEnglish ? 'none' : 'inline');
-    spanishLinks.forEach(link => link.style.display = isEnglish ? 'inline' : 'none');
-
-    // Change the button text
-    this.textContent = isEnglish ? 'EN' : 'ES';
+document.querySelectorAll(".info-btn").forEach(button => {
+    button.addEventListener("click", () => {
+        modalTitle.textContent = button.dataset.title;
+        modalBody.innerHTML = button.dataset.content;
+        modal.classList.add("active");
+    });
 });
+
+closeModal.addEventListener("click", () => {
+    modal.classList.remove("active");
+});
+
+modal.addEventListener("click", e => {
+    if (e.target === modal) {
+        modal.classList.remove("active");
+    }
+});
+
+
+
