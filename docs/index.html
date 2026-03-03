@@ -3,45 +3,192 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Beauty Store</title>
-    <link rel="stylesheet" href="css_website.css">
+    <title>Nature Box</title>
+
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">Beauty Store</div>
-            <ul class="nav-links">
-                <li><a href="#home" class="en">Home</a><a href="#home" class="es" style="display:none">Inicio</a></li>
-                <li><a href="#products" class="en">Products</a><a href="#products" class="es" style="display:none">Productos</a></li>
-                <li><a href="#cart" class="en">Cart</a><a href="#cart" class="es" style="display:none">Carrito</a></li>
-                <li><a href="#checkout" class="en">Checkout</a><a href="#checkout" class="es" style="display:none">Pago</a></li>
-                <li><a href="#log_in" class="en">Log In</a><a href="#log_in" class="es" style="display:none">Iniciar</a></li>
-                <li><a href="javascript:void(0)" id="language-toggle">ES</a></li> <!-- Language Toggle Button -->
-            </ul>
-        </nav>
-    </header>
-    
-    <section id="home">
-        <div class="hero">
-            <h1><span class="en">Discover Your Beauty</span><span class="es" style="display:none">Descubre Tu Belleza</span></h1>
-            <p><span class="en">Explore our exclusive collection of beauty products.</span><span class="es" style="display:none">Explora nuestra exclusiva colección de productos de belleza.</span></p>
-            <a href="#products" class="btn">
-                <span class="en">Shop Now</span><span class="es" style="display:none">Compra Ahora</span>
-            </a>
+    <div class="container">
+        <!-- INTRO -->
+        <div class="decorated-box intro-box">
+            <h1>ALTHEA NATURAL</h1>
+            <p>Cosmética artesanal creada con cuidado, ingredientes naturales y procesos conscientes.</p>
         </div>
-    </section>
+
+        <!-- PRODUCTOS -->
+        <div class="products-grid">
+            <div class="decorated-box product-box">
+                <img src="images/crema_open.png" alt="Producto 1">
+                <h2>Crema de Dia Vit C-Bright</h2>
+                <button class="info-btn"
+                    data-title="Crema de Dia Vit C-Bright"
+                    data-content='
+                        <section class="modal-section">
+                            <h3>Descripción</h3>
+                            <p>Esta crema natural con ácido ascórbico (Vitamina C), es un potente antioxidante que combate radicales libres, estimula la producción de colágeno para reducir arrugas, unifica el tono de piel, además de apórtale luminosidad. Reduce manchas y mejora la textura, dejando una piel más radiante, elástica y joven. Es ideal para revitalizar pieles apagadas, fatigadas o con signos de envejecimiento y debe usarse por la mañana, siempre seguida de protector solar. A las pieles grasas les va a beneficiar mucho ya que ayuda a regular el exceso de sebo en la piel. A las pieles secas les da firmeza y elasticidad. La crema diurna para pieles normales a secas se diferencia de la crema diurna para pieles mixtas a grasas, en la cantidad y proporción de los diferentes aceites vegetales prensados en frío utilizados.</p>
+                        </section>
+
+                        <section class="modal-section">
+                            <h3>Modo de uso</h3>
+                            <div class="icon-row">
+                                <img src="images/crema_open.png" alt="">
+                                <p>Uso diario por la mañana ideal para aprovechar sus efectos antioxidantes y proteger la piel durante el día, siempre seguida de protector solar.</p>
+                            </div>
+                        </section>
+                        <section class="modal-section">
+                            <h3>Propiedades</h3>
+                            <div class="icon-row">
+                                <img src="images/crema_open.png" alt="">                                
+                                <ul> 
+                                    <li>Antioxidante potente: Neutraliza los radicales libres causados por la contaminación, el estrés y la radiación UV, previniendo el envejecimiento prematuro.</li>
+                                    <li>Estimula el colágeno: Favorece la producción de colágeno y elastina, lo que mejora la firmeza, elasticidad y reduce líneas de expresión y arrugas.</li>
+                                    <li>Ilumina y despigmenta: Inhibe la enzima tirosinasa, reduciendo la producción de melanina, lo que atenúa manchas oscuras y unifica el tono de la piel, aportando luminosidad.</li>
+                                    <li>Protege y repara: Actúa como fotoprotector (no sustituye al protector solar, pero potencia su efecto) y limita el daño oxidativo en las células.</li>
+                                    <li>Mejora la textura: Ayuda a unificar la textura de la piel y a disminuir la apariencia de los poros. </li>
+                                <ul>     
+                            </div>
+                        </section>
+
+                        <section class="modal-section">
+                            <h3>Precauciones</h3>
+                            <div class="icon-row">
+                                <img src="images/crema_open.png" alt="">
+                                <p>La vitamina C (ácido ascórbico), puede ser irritante para algunas pieles, especialmente en pieles sensibles, irritadas o con acné. Si fuese el caso, suspender el uso.Realice la prueba de parche (patch test), prueba de sensibilidad o test de alergia cutánea. Consiste en aplicar una pequeña cantidad de producto en la cara interna del antebrazo o detrás de la oreja durante 24-48 horas para verificar reacciones.</p>
+                            </div>
+                        </section>
+
+                        <section class="modal-section">
+                            <h3>Ingredientes</h3>
+                            <div class="icon-row">
+                                <img src="images/crema_open.png" alt="">
+                                <p>Hidrolato de hibisco (Hibiscus) y rosa mosqueta (Rosa rubiginosa), Gel de aloe vera (Aloe barbadensis Miller). Aceites vegetales de: Castaña (Bertholletia excelsa), Oliva (Olea europaea), Cusi (Orbignya Oleifera), Argán (Argania spinosa kernel), Rosa Mosqueta (Rosa rubiginosa), Cera emulsifying wax, Alcohol cetílico, Vitamina C (ácido ascórbico), Ácido hialurónico, Vitamina E, Glicerina vegetal, Goma Xantana, Conservante natural, AE Romero, AE de Lavanda.</p>
+                            </div>
+                        </section>
+                    '>
+                    Más información
+                </button>
+            </div>
+            
     
-    <section id="products">
-        <h2><span class="en">Our Products</span><span class="es" style="display:none">Nuestros Productos</span></h2>
-        <div class="product-list">
-            <!-- Product items will be dynamically added here -->
+            <div class="decorated-box product-box">
+                <img src="images/crema_open.png" alt="Producto 2">
+                <h2>Crema de Noche C-Defense</h2>
+                <button class="info-btn"
+                    data-title="Crema de Noche C-Defense"
+                    data-content='
+                        <section class="modal-section">
+                            <h3>Descripción</h3>
+                            <p>Esta crema natural es el dúo definitivo para una piel radiante, esta sinergia perfecta trabaja a doble nivel, combina el poder antioxidante de la vitamina C con la firmeza de los péptidos de colágeno para renovar la piel. Al potenciar la producción natural de colágeno y proteger contra el daño ambiental, esta fórmula combate arrugas, mejora la elasticidad y aporta luminosidad, logrando una apariencia más joven y firme.</p>
+                        </section>
+
+                        <section class="modal-section">
+                            <h3>Modo de uso</h3>
+                            <div class="icon-row">
+                                <img src="images/crema_open.png" alt="">
+                                <p>Aplicar sobre la piel limpia durante la noche, con el fin de evitar contacto con la luz solar.</p>
+                            </div>
+                        </section>
+
+                        <section class="modal-section">
+                            <h3>Propiedades</h3>
+                            <div class="icon-row">
+                                <img src="images/crema_open.png" alt="">                                
+                                <ul> 
+                                    <li>Antioxidante potente: Neutraliza los radicales libres causados por la contaminación, el estrés y la radiación UV, previniendo el envejecimiento prematuro.</li>
+                                    <li>Estimula el colágeno: Favorece la producción de colágeno y elastina, lo que mejora la firmeza, elasticidad y reduce líneas de expresión y arrugas.</li>
+                                    <li>Ilumina y despigmenta: Inhibe la enzima tirosinasa, reduciendo la producción de melanina, lo que atenúa manchas oscuras y unifica el tono de la piel, aportando luminosidad.</li>
+                                    <li>Protección y reparación: Actúa como fotoprotector (no sustituye al protector solar, pero potencia su efecto) y limita el daño oxidativo en las células.</li>
+                                    <li>Mejora la textura: Ayuda a unificar la textura de la piel y a disminuir la apariencia de los poros. </li>
+                                    <li>Mayor Firmeza y Elasticidad: Mejora la estructura dérmica, reduciendo la flacidez y las arrugas, lo que resulta en una piel más tonificada y joven. Proporciona un efecto reafirmante visible</li>
+                                    <li>Propiedades Cicatrizantes: Facilita la regeneración celular y ayuda a mejorar la apariencia de marcas de acné y cicatrices.</li>
+                                <ul>     
+                            </div>
+                        </section>
+
+                        <section class="modal-section">
+                            <h3>Precauciones</h3>
+                            <div class="icon-row">
+                                <img src="images/crema_open.png" alt="">
+                                <p>Se recomienda su aplicación por la noche. Es ideal para todo tipo de pieles, incluyendo las que buscan combatir el tono apagado y la hiperpigmentación. El ácido ascórbico es fotosensible, (no fotosensibilizante), es decir que se degrada con la exposición a la luz solar y el aire. Por lo tanto, la crema se presenta en envases opacos para proteger la fórmula. El ácido ascórbico puede ser irritante para algunas pieles, especialmente en pieles sensibles, irritadas o con acné.Realice la prueba de parche (patch test), prueba de sensibilidad o test de alergia cutánea. Consiste en aplicar una pequeña cantidad de producto en la cara interna del antebrazo o detrás de la oreja durante 24-48 horas para verificar reacciones.</p>
+                            </div>
+                        </section>
+
+                        <section class="modal-section">
+                            <h3>Ingredientes</h3>
+                            <div class="icon-row">
+                                <img src="images/crema_open.png" alt="">
+                                <p>Hidrolato de hibisco (Hibiscus) y rosa mosqueta (Rosa rubiginosa), Gel de aloe vera (Aloe barbadensis Miller). Manteca de Copoazú (Theobroma grandiflorum). Aceites vegetales de: Castaña (Bertholletia excelsa), Oliva (Olea europaea), Cusi (Orbignya oleifera), Argán (Argania Spinosa kernel), Rosa Mosqueta (Rosa rubiginosa), Cera emulsifying wax, Alcohol cetílico, Péptidos de colágeno, Vitamina C (ácido ascórbico), Ácido hialurónico, Vitamina E, Glicerina vegetal, Goma Xantana, Conservante natural, AE Romero, AE de Lavanda.</p>
+                            </div>
+                        </section>
+                    '>
+                    Más información
+                </button>
+            </div>
+    
+            <div class="decorated-box product-box">
+                <img src="images/crema_open.png" alt="Producto 3">
+                <h2>Crema de Dia y Noche Alove</h2>
+                <button class="info-btn"
+                    data-title="Crema de Dia y Noche Alove"
+                    data-content='
+                        <section class="modal-section">
+                            <h3>Descripción</h3>
+                            <p>La crema natural de avena y aloe vera es un potente regenerador cutáneo que hidrata profundamente, nutre y calma irritaciones, siendo ideal para pieles secas, sensibles o irritadas. Combina la acción suavizante y protectora de la avena con el poder cicatrizante y antiinflamatorio del aloe, ofreciendo alivio tras la exposición solar, combatiendo el envejecimiento prematuro gracias a sus antioxidantes y beta-glucanos. La combinación de avena y aloe vera en una crema natural crea un tratamiento potente para la piel, uniendo la capacidad de restauración del pH y protección de la avena con el poder regenerador e hidratante del aloe.</p>
+                        </section>
+
+                        <section class="modal-section">
+                            <h3>Modo de uso</h3>
+                            <div class="icon-row">
+                                <img src="images/crema_open.png" alt="">
+                                <p>Es ideal para pieles sensibles o muy secas, ofrece una textura no grasa y de rápida absorción. Incorporar una crema de avena y aloe vera, enriquecida con ácido hialurónico, vitamina E, es una forma eficaz de mantener la piel saludable, nutrida y protegida. Uso diario de día y de noche.</p>
+                            </div>
+                        </section>
+
+                        <section class="modal-section">
+                            <h3>Propiedades</h3>
+                            <div class="icon-row">
+                                <img src="images/crema_open.png" alt="">                                
+                                <ul> 
+                                    <li>Hidratación profunda y nutrición intensiva: La avena actúa como humectante, reteniendo la humedad en la dermis y evitando la pérdida de agua, ideal para pieles maduras o secas; el aloe tiene una alta capacidad de retener agua y nutre sin dejar sensación grasa, aportando frescura inmediata.</li>
+                                    <li>Alivio de irritaciones y piel sensible: Ayuda con la piel escaldada por el sol, picaduras o irritación tras la depilación o el afeitado. Tanto la avena como el aloe ayudan a reducir el enrojecimiento y la picazón, dermatitis y las quemaduras, proporcionando alivio inmediato.</li>
+                                    <li>Cicatrización: El aloe estimula la producción de colágeno, lo que ayuda a la regeneración celular, a reparar marcas de acné, heridas pequeñas y quemaduras. La avena contribuye a restaurar el pH normal de la piel, fortaleciendo su barrera natural contra agresiones externas.</li>
+                                    <li>Acción Limpiadora: El aloe posee propiedades antisépticas y astringentes que ayudan a limpiar los poros, el aloe actúa como antioxidante frente a los radicales libres. La avena ayuda a eliminar células muertas suavemente, impurezas, mejorando la luminosidad y el tono de la tez sin irritar.</li>
+                                <ul>     
+                            </div>
+                        </section>
+
+                        <section class="modal-section">
+                            <h3>Precauciones</h3>
+                            <div class="icon-row">
+                                <img src="images/crema_open.png" alt="">
+                                <p>Realice la prueba de parche (patch test), prueba de sensibilidad o test de alergia cutánea. Consiste en aplicar una pequeña cantidad de producto en la cara interna del antebrazo o detrás de la oreja durante 24-48 horas para verificar reacciones. </p>
+                            </div>
+                        </section>
+
+                        <section class="modal-section">
+                            <h3>Ingredientes</h3>
+                            <div class="icon-row">
+                                <img src="images/crema_open.png" alt="">
+                                <p>Hidrolato de Manzanilla Romana (Chamaemelum nobile), Gel de aloe vera (Aloe barbadensis Miller), Leche de Avena (Avena sativa L.). Aceites vegetales de: Castaña (Bertholletia excelsa), Manzanilla (Matricaria chamomilla L.), Cusi (Orbignya Oleifera), Coco (Cocos nucifera), Oliva (Olea europaea), Argán (Argania spinosa kernel), Rosa Mosqueta (Rosa rubiginosa), Cera emulsifying wax, Alcohol cetílico, Ácido hialurónico, Vitamina E, Glicerina vegetal, Goma Xantana, Conservante natural, AE Manzanilla, AE de Lavanda, AE Jazmín.</p>
+                            </div>
+                        </section>
+                    '>
+                    Más información
+                </button>
+            </div>
         </div>
-    </section>
-    
-    <footer>
-        <p>&copy; 2025 Beauty Store. All rights reserved.</p>
-    </footer>
-    
-    <script src="website_java.js"></script>
+        <!-- MODAL -->
+        <div class="modal-overlay" id="modal">
+            <div class="modal-content">
+                <span class="modal-close" id="closeModal">&times;</span>
+                <h2 id="modal-title">Título del producto</h2>
+                <div id="modal-body"></div>
+            </div>
+        </div>        
+    </div>    
+
+    <!-- Link JS -->
+    <script src="script.js"></script>
 </body>
 </html>
