@@ -11,7 +11,7 @@ body {
     background: linear-gradient(135deg, #f7f2f5, #e9f1ec);
     font-family: "Georgia", serif;
 
-    /*  IMPORTANTE: ya no centramos todo como un solo bloque */
+    /* ⬇️ IMPORTANTE: ya no centramos todo como un solo bloque */
     display: flex;
     justify-content: center;
     padding: 40px 20px;
@@ -19,7 +19,7 @@ body {
 
 .container {
     display: flex;
-    flex-direction: column;   /*  clave para que los cuadros esten debajo de cada uno */
+    flex-direction: column;   /* 👈 clave para que los cuadros esten debajo de cada uno */
     gap: 30px;                /* espacio vertical entre cuadros */
     align-items: center;      /* centra los cuadros horizontalmente */
     max-width: 1200px;
@@ -224,38 +224,28 @@ body {
     margin-top: 20px;
     border-radius: 10px;
 }
-
-
-/* Extended information -ONLY FOR NOT MODAL PPPING  
-.product-info {
-    display: none;               oculta por defecto 
-    margin-top: 20px;
+/* Whatsapp Button */
+.order-global {
     text-align: center;
+    margin: 70px 0 40px 0;
 }
-.product-info p {
-    font-size: 0.95rem;
-    line-height: 1.6;
-    margin-bottom: 12px;
-}
-.product-info img {
-    width: 100%;
-    max-width: 260px;
-    margin: 15px auto;
-    border-radius: 8px;
-}
-.product-info {
-    padding: 20px;
-    background-color: #f9f9f9;
+.whatsapp-btn {
+    display: inline-block;
+    padding: 14px 28px;
+    background-color: #25D366;
+    color: white;
+    text-decoration: none;
     border-radius: 10px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-size: 1.05rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
 }
-*/
+.whatsapp-btn:hover {
+    background-color: #1ebe5d;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.18);
+}
 
-/*.product-info:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
-}
-*/
 
 /* Decorative corners */
 .corner {
