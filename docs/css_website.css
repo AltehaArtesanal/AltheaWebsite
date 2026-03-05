@@ -19,7 +19,7 @@ body {
 
 .container {
     display: flex;
-    flex-direction: column;   /* 👈 clave para que los cuadros esten debajo de cada uno */
+    flex-direction: column;   /* clave para que los cuadros esten debajo de cada uno */
     gap: 30px;                /* espacio vertical entre cuadros */
     align-items: center;      /* centra los cuadros horizontalmente */
     max-width: 1200px;
@@ -280,3 +280,4 @@ body {
         padding: 40px 25px;
     }
 }
+
