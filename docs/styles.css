@@ -1,0 +1,282 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Page background */
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f7f2f5, #e9f1ec);
+    font-family: "Georgia", serif;
+
+    /* ⬇️ IMPORTANTE: ya no centramos todo como un solo bloque */
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;   /* clave para que los cuadros esten debajo de cada uno */
+    gap: 30px;                /* espacio vertical entre cuadros */
+    align-items: center;      /* centra los cuadros horizontalmente */
+    max-width: 1200px;
+    width: 100%;
+}
+
+
+/* Decorated box */
+.decorated-box {
+    position: relative;
+    max-width: 600px;
+    width: 100%;
+    padding: 50px 40px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+    text-align: center;
+}
+.decorated-box h1 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #4b5d52;
+}
+
+.decorated-box p {
+    margin-bottom: 14px;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Introdution of Main Box */
+.intro-box {
+    max-width: 700px;
+}
+.intro-box h1 {
+    font-size: 2.2rem;
+}
+.intro-box p {
+    font-size: 1.1rem;
+}
+
+/* Product Box */
+.product-box {
+    max-width: 420px;
+    padding: 35px 30px;
+}
+.product-box h2 {
+    font-size: 1.4rem;
+    color: #4b5d52;
+    margin-bottom: 12px;
+}
+.product-box p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Product Grid */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    width: 100%;
+}
+
+/* Product Box */
+.product-box {
+    max-width: 380px;
+    width: 100%;
+    padding: 30px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+/* Product Box Image */
+.product-box img {
+    width: 100%;
+    max-width: 220px;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+/* Product Text*/
+.product-box h2 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: #4b5d52;
+}
+
+.product-box p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+
+/* Botón */
+.info-btn {
+    margin-top: 15px;
+    padding: 10px 22px;
+    background-color: #4b5d52;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.19s ease;;
+}
+.info-btn:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.12);
+}
+
+
+/* Overlay */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+.modal-overlay.active {
+    display: flex;
+}
+
+/* Modal box */
+.modal-content {
+    background: #fff;
+    max-width: 520px;
+    width: 90%;
+    border-radius: 14px;
+    text-align: center;
+    transform: scale(0.88) translateY(10px);
+    transition: transform 0.45s cubic-bezier(0.4, 0.0, 0.2, 1);
+    max-height: 85vh;
+    overflow-y: auto;
+    padding: 40px 35px;
+}
+.modal-content > * {
+    opacity: 0;
+    transition: opacity 0.5s ease 0.25s;
+}
+.modal-overlay.active .modal-content > * {
+    opacity: 1;
+}
+
+/* Modal Section */
+.modal-section {
+    margin-bottom: 28px;
+}
+.modal-section h3 {
+    font-size: 1.1rem;
+    color: #4b5d52;
+    margin-bottom: 10px;
+    letter-spacing: 0.4px;
+}
+.modal-section p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: #555;
+}
+/* Iconos en body of modal*/
+.icon-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+.icon-row img {
+    width: 26px;
+    height: 26px;
+    opacity: 0.8;
+    margin-top: 2px;
+}
+
+
+/* Active state */
+.modal-overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+.modal-overlay.active .modal-content {
+    transform: scale(1) translateY(0);
+}
+
+/* Close button */
+.modal-close {
+    position: absolute;
+    top: 18px;
+    right: 22px;
+    font-size: 26px;
+    cursor: pointer;
+    color: #666;
+}
+.modal-content img {
+    max-width: 280px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+/* Whatsapp Button */
+.order-global {
+    text-align: center;
+    margin: 70px 0 40px 0;
+}
+.whatsapp-btn {
+    display: inline-block;
+    padding: 14px 28px;
+    background-color: #25D366;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+.whatsapp-btn:hover {
+    background-color: #1ebe5d;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.18);
+}
+
+
+/* Decorative corners */
+.corner {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.8;
+}
+/* List format*/
+.modal-section ul {
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+.modal-section li {
+    margin-bottom: 6px;
+    line-height: 1.5;
+}
+.modal-section li {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: #555;
+}
+
+
+
+/* Responsive */
+@media (max-width: 600px) {
+    .decorated-box {
+        padding: 40px 25px;
+    }
+}
